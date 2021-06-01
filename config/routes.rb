@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     
     namespace :v1, path: "/", constraints: ApiVersionConstraint.new(version: 1, default: true) do
 
+      resources :users, only: [:show]
+
     end
 
   end
