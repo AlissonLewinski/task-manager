@@ -20,7 +20,7 @@ class Api::V1::SessionsController < ApplicationController
       user = User.find_by(auth_token: params[:id])
       user.generate_authentication_token!
       user.save
-      head 104
+      head 204
     end
 
     private
